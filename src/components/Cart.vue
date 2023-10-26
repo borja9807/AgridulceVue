@@ -1,7 +1,8 @@
 <template>
-    <div>
-      <i class="cart fa-solid fa-cart-shopping fa-lg" @click="openCart"></i>
-      <div class="modal" :class="{ active: cartActive }">
+  <div>
+    <i class="cart fa-solid fa-cart-shopping fa-lg" @click="openCart"></i>
+    <div class="modal" :class="{ active: cartActive }">
+      <div class="modal-container">
         <!-- Contenido del carrito -->
         <div id="cart-content" class="modal-content cart-visible">
           <header class="cart-header">
@@ -28,185 +29,185 @@
         </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  export default {
-    data() {
-      return {
-        cartActive: false
-      };
+<script>
+export default {
+  data() {
+    return {
+      cartActive: false
+    };
+  },
+  methods: {
+    openCart() {
+      this.cartActive = true;
     },
-    methods: {
-      openCart() {
-        this.cartActive = true;
-      },
-      closeCart() {
-        this.cartActive = false;
-      }
+    closeCart() {
+      this.cartActive = false;
     }
-  };
-  </script>
+  }
+};
+</script>
   
 <style scoped>
 .cart:hover {
-    transform: scale(1.1);
-    transition: .3s;
+  transform: scale(1.1);
+  transition: .3s;
 }
 
 a:link,
 a:visited,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #cart-button {
-    color: #1D1D1B;
+  color: #1D1D1B;
 }
 
 .cart {
-    align-items: center;
-    color: #1D1D1B;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.75;
-    transition: all .25s ease-out;
+  align-items: center;
+  color: #1D1D1B;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all .25s ease-out;
 }
 
 .modal {
-    background-color: #fff;
-    height: 100vh;
-    max-width: 300px;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translateX(100%);
-    transition: all 0.2s ease-in;
-    visibility: hidden;
-    width: 100%;
-    z-index: 20000;
+  background-color: #fff;
+  height: 100vh;
+  max-width: 300px;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in;
+  visibility: hidden;
+  width: 100%;
+  z-index: 20000;
 }
 
 .modal::after {
-    background-color: rgba(0, 0, 0, 0.6);
-    content: '';
-    height: 100vh;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    right: 300px;
-    top: 0;
-    transition: all .2s ease-in;
-    width: 100vw;
-    z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: '';
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 300px;
+  top: 0;
+  transition: all .2s ease-in;
+  width: 100vw;
+  z-index: 999;
 }
 
 .modal.active {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 .modal.active::after {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-container {
-    height: 100%;
-    padding: 30px;
-    position: relative;
-    z-index: 1000;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  z-index: 1000;
 }
 
 .modal-content {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .cart-header {
-    border-bottom: 1px solid #dbdbdb;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .cart-header h2 {
-    color: #ad6565;
-    font-size: 1.5rem;
-    text-align: center;
+  color: #ad6565;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .cart-body {
-    flex-grow: 1;
-    overflow-x: hidden;
-    overflow-y: visible;
-    position: relative;
-    width: 100%;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  width: 100%;
 }
 
 .cart-footer {
-    border-top: 1px solid #dbdbdb;
-    margin-top: 30px;
-    padding-top: 30px;
+  border-top: 1px solid #dbdbdb;
+  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .cart-list-price ul li+li {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .cart-list-price ul li strong {
-    color: #ad6565;
+  color: #ad6565;
 }
 
 .modal-cart-total {
-    color: #ad6565;
-    font-size: 1.25rem;
-    margin: 20px 0;
+  color: #ad6565;
+  font-size: 1.25rem;
+  margin: 20px 0;
 }
 
 .modal-btns {
-    border-top: 1px solid #dbdbdb;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    justify-content: space-between;
-    padding-top: 30px;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
 .btn {
-    all: unset;
-    background: #ad6565;
-    border: 2px solid #ad6565;
-    border-radius: .375rem;
-    color: #fff;
-    cursor: pointer;
-    font-family: system-ui;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 8px;
-    text-align: center;
-    transition: all .2s ease;
+  all: unset;
+  background: #ad6565;
+  border: 2px solid #ad6565;
+  border-radius: .375rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: system-ui;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px;
+  text-align: center;
+  transition: all .2s ease;
 }
+
 .btn:hover {
-    background: #fff;
-    border: 2px solid #ad6565;
-    color: #ad6565;
+  background: #fff;
+  border: 2px solid #ad6565;
+  color: #ad6565;
 }
 
 .close-btn {
-    background: #fff;
-    color: #ad6565;
+  background: #fff;
+  color: #ad6565;
 }
 
 .close-btn:hover {
-    background: #ad6565;
-    color: #fff;
+  background: #ad6565;
+  color: #fff;
 }
-
-
 </style>

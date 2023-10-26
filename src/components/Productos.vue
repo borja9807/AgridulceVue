@@ -54,6 +54,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  
+
   /* Espacio entre los productos */
 }
 
@@ -64,11 +66,12 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  position: relative;
 }
 
 .product-image {
   max-width: 100%;
 }
 
-/* Puedes agregar más estilos según tus necesidades */
+
 </style>

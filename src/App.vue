@@ -11,6 +11,7 @@ import Footer from '@/components/Footer.vue'; // Ajusta la ruta según tu estruc
     <Navegacion></Navegacion>
   <main>
     
+    
   </main>
   <Footer></Footer>
 </template>

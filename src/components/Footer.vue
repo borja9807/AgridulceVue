@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <footer class="footer">
-      <div class="newsletter">
-        <h2>Suscríbete a nuestro boletín</h2>
-        <form @submit.prevent="subscribe">
-          <input type="email" v-model="email" placeholder="Correo Electrónico" required>
-          <button type="submit">Suscribir</button>
-        </form>
-      </div>
-      <div class="social-links">
+  <footer class="footer">
+    <div class="newsletter">
+      <h2>Suscríbete a nuestro boletín</h2>
+      <form @submit.prevent="subscribe">
+        <input type="email" v-model="email" placeholder="Correo Electrónico" required>
+        <button type="submit">Suscribir</button>
+      </form>
+    </div>
+    <div class="social-links">
 
-        <a href="https://www.facebook.com/tupagina" class='social-button' target="_blank"><i
-            class="fa-brands fa-facebook fa-xl"></i></a>
-        <a href="https://www.instagram.com/tupagina" class='social-button' target="_blank"><i
-            class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a>
-        <a href="https://www.tiktok.com/@tupagina" class='social-button' target="_blank"><i class="fa-brands fa-tiktok fa-lg"
-            style="color: #ffffff;"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=3218967984" class='social-button' target="_blank"><i
-            class="fa-brands fa-whatsapp fa-xl" style="color: #009e0b;"></i></a>
-      </div>
-      <div class="contact-info">
-        <h2>Contacto</h2>
-        <p>agridulce@agridulce.com</p>
-      </div>
-    </footer>
-  </div>
+      <a href="https://www.facebook.com/tupagina" class='social-button' target="_blank"><i
+          class="fa-brands fa-facebook fa-xl"></i></a>
+      <a href="https://www.instagram.com/tupagina" class='social-button' target="_blank"><i
+          class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a>
+      <a href="https://www.tiktok.com/@tupagina" class='social-button' target="_blank"><i
+          class="fa-brands fa-tiktok fa-lg" style="color: #ffffff;"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=3218967984" class='social-button' target="_blank"><i
+          class="fa-brands fa-whatsapp fa-xl" style="color: #009e0b;"></i></a>
+    </div>
+    <div class="contact-info">
+      <h2>Contacto</h2>
+      <p>agridulce@agridulce.com</p>
+    </div>
+  </footer>
 </template>
 <script>
 export default {
@@ -65,6 +63,7 @@ export default {
   text-decoration: none;
   color: #0077B5;
 }
+
 .social-button:hover {
   transform: scale(1.1);
   transition: .1s;
@@ -76,15 +75,16 @@ export default {
   color: #fff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: medium;
-  
+
 }
+
 .newsletter {
-  text-align: center; 
-  margin-top: 2rem; 
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .newsletter h2 {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   color: #fff;
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -92,7 +92,7 @@ export default {
 
 .newsletter input {
   padding: 0.5rem;
-  margin-right: 0.5rem; 
+  margin-right: 0.5rem;
   border-radius: 0.5rem;
   padding: 1 2rem;
   outline: none;
@@ -101,8 +101,8 @@ export default {
 }
 
 .newsletter button {
-  background-color: #ad6565; 
-  color: #fff; 
+  background-color: #ad6565;
+  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -113,5 +113,4 @@ export default {
   transform: scale(1.03);
   transition: .1s;
 }
-
 </style>
