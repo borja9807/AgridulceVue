@@ -1,0 +1,45 @@
+<script setup>
+import Navegacion from './components/Navegacion.vue';
+import Productos from './components/Productos.vue';
+import Footer from '@/components/Footer.vue'; // Ajusta la ruta según tu estructura de directorios
+
+
+
+</script>
+
+<template>
+    <Navegacion></Navegacion>
+  <main>
+    
+  </main>
+  <Footer></Footer>
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+</style>
