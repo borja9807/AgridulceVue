@@ -73,7 +73,7 @@ a:active {
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.75;
+  opacity: 1;
   transition: all .25s ease-out;
 }
 

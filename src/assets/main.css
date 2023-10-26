@@ -3,3 +3,10 @@
   display: flex;
   }
 
+/* Media Queries para hacer el diseño responsivo */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
